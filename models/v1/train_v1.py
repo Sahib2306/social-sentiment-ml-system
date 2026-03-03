@@ -7,7 +7,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report
 
-# 1. Load dataset
 df = pd.read_csv("../../data/social_media_sentiment_train.csv")
 
 # 2. Basic text cleaning
@@ -23,18 +22,15 @@ df["clean_text"] = df["text"].apply(clean_text)
 X = df["clean_text"]
 y = df["label"]
 
-# 3. Train/test split
 X_train, X_val, y_train, y_val = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# 4. Create pipeline
 pipeline = Pipeline([
     ("tfidf", TfidfVectorizer(max_features=5000)),
     ("clf", LogisticRegression(max_iter=1000))
 ])
 
-# 5. Train
 pipeline.fit(X_train, y_train)
 
 # 6. Evaluate
