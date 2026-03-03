@@ -1,0 +1,22 @@
+social_sentiment_app/
+│
+├── app/
+│   ├── main.py
+│   ├── routes.py
+│   ├── schemas.py
+│   ├── utils.py
+│   └── templates/
+│       └── index.html
+│
+├── models/
+│   ├── v1/
+│   └── v2/
+│
+├── data/
+│
+├── notebooks/
+│
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+└── README.md

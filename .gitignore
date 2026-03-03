@@ -1,0 +1,30 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.env
+
+# OS files
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model artifacts (optional if large)
+*.h5
+*.keras
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# TensorFlow Serving variables cache
+models/v2/serving/sentiment_v2/1/variables/
+models/v2/serving/sentiment_v2/1/assets/

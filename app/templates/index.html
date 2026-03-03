@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analyzer</title>
+</head>
+<body>
+    <h1>Social Media Sentiment Analyzer</h1>
+
+    <form action="/predict" method="post">
+        <textarea name="text" rows="5" cols="40" placeholder="Enter text here..."></textarea>
+        <br><br>
+
+        <label>Select Model:</label>
+        <select name="model">
+            <option value="v1">V1 - Logistic Regression</option>
+            <option value="v2">V2 - LSTM (TensorFlow Serving)</option>
+        </select>
+
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h2>Prediction: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
